@@ -7,14 +7,15 @@ services:
     restart: always
     ports:
       - 8898:80
+    volumes:
+      - ./data/data:/var/www/html/data
+      - ./data/apps:/var/www/html/apps
+      - ./data/config:/var/www/html/config
 
   mysql:
     image: mariadb
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_ROOT_PASSWORD: "123456"
     volumes:
-    # specifies the path replace "./data".
-      - ./data:/var/www/html/data
-
-    
+      - ./data/mysql:/var/lib/mysql

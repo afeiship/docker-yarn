@@ -13,3 +13,8 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: 123456
+    volumes:
+    # specifies the path replace "./data".
+      - ./data:/var/www/html/data
+
+    

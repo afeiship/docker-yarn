@@ -31,3 +31,8 @@ docker rmi owncloud_default
 # Database name: pick any name
 # Database host: replace "localhost" with "mysql"
 ```
+
+## very important:
+```conf
+# Database host: replace "localhost" with "mysql"
+```

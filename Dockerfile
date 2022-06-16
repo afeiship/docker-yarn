@@ -2,10 +2,6 @@ ARG NODE_VERSION=14.16.1
 FROM node:$NODE_VERSION-alpine
 
 WORKDIR /app
+COPY entrypoint.sh /app/entrypoint.sh
 
-CMD ["yarn"]
-
-
-# v14.16.1
-# 6.14.12
-# 1.22.5
+ENTRYPOINT ["/app/entrypoint.sh"]
